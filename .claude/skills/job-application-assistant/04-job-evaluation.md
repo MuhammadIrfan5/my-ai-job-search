@@ -28,6 +28,14 @@ Read the posting's eligibility / work rights / "who can apply" section **verbati
 
 If the candidate's permit also constrains *hours* or *start date* (a student visa with a term-time cap, a permit that begins on graduation), record that as a second gate under this section during `/setup`, with the specific dates. Do not merge it with the eligibility question above — they fail for different reasons and need different answers.
 
+### Candidate-specific: work authorisation (set at /setup)
+
+- **UK:** holds a **UK Graduate Visa valid until 4 January 2027**. Full right to work with no hours cap until then. For any role lasting beyond that date, the employer must be a licensed sponsor able to issue a **Skilled Worker visa**. Classify UK postings:
+  - States "we sponsor" / "sponsorship available" / holds a sponsor licence → **PASS**, note as a positive.
+  - States "no sponsorship" / "must have unrestricted / permanent right to work" / "must be a British citizen or settled" → **FAIL — hard stop.** Quote the wording back.
+  - Silent → **PROCEED, mark unverified.** Short contracts (< the visa runway) are fine regardless; for permanent roles, check the employer's UK sponsor-licence status before drafting.
+- **Outside the UK** (USA, Canada, EU, Australia, NZ, Middle East, etc.): the candidate has **no standing work authorisation**. Every such role needs employer visa sponsorship / relocation support. Treat "silent on sponsorship" as **FLAG**, and an explicit "no sponsorship / must have local work rights" as **FAIL**.
+
 A role that fails this gate is not scored and not drafted. Everything below applies only to roles that pass it.
 
 ## Language Gate — run before scoring
@@ -60,9 +68,11 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Java (Core Java 11/17/21, Spring Boot), REST APIs and microservices, high-throughput multithreaded backend, AWS (EC2, S3, Secrets Manager, Cognito, CloudFormation), Terraform / IaC, Jenkins and Groovy pipelines, GitLab CI/CD, GitHub Actions, Docker, Git/Bitbucket/GitLab administration and migration, Python automation, Node.js/React, PHP/Laravel, Oracle/PostgreSQL/MySQL, TDD
+
+**Moderate match areas:** Kubernetes (used, not deep), MongoDB/Redis, TypeScript, Gradle plugin development, SOAP/IBM BPM integration, observability/monitoring dashboards, cloud cost/TTL tooling, big-data analytics (MSc-level)
+
+**Weak match areas:** Go / Rust / C#/.NET, Azure and GCP (AWS only), advanced Kubernetes operations (service mesh, operators), data engineering at scale (Spark/Kafka/Airflow in production), ML engineering, mobile development, deep security / compliance engineering
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for? Match on the function and nature of the work performed, not the literal job title - a "Data Consultant" and a "Data Scientist" role can be functionally identical.
@@ -74,9 +84,11 @@ Does work history align with what they're looking for? Match on the function and
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** DevOps / platform engineering (CI/CD automation, IaC, repo migration, cloud provisioning portals), Java backend / Java software engineering, full-stack web development (Java/Node/PHP + React), build & release automation, enterprise workflow automation (insurance / IBM BPM), fintech integration work
+
+**Moderate:** Cloud engineering / SRE (infra ownership and support, not yet a dedicated reliability role), API engineering, PHP/Laravel product engineering (2020-21 primary, used since), data/analytics (MSc, limited production)
+
+**Entry-level:** Formal team leadership / line management, pure SRE on-call rotations, dedicated data-engineering or ML roles, security engineering
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -107,19 +119,20 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Grow as a DevOps / Platform Engineer: deeper cloud architecture, IaC, and CI/CD ownership across the full delivery path
+- Keep strong Java backend / full-stack engineering skills current alongside the platform work (the dev↔ops bridge is the differentiator)
+- Land a permanent, sponsorship-backed role that provides long-term UK stability beyond the Graduate Visa (expires 4 Jan 2027)
+- Move toward end-to-end ownership of scalable systems, and over time toward technical leadership / architectural decision-making
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
-- Non-task factors: leadership style, department culture, company values, degree of autonomy
+- Tasks that energize: solving complex technical problems, automation, improving and scaling systems, building solutions from scratch, owning work from development through deployment, removing manual toil
+- Tasks that drain: repetitive manual work with little engineering ownership, maintenance-only roles with no room to improve systems, rigidly siloed work
+- Non-task factors: leadership style, department culture, company values, degree of autonomy. On-call is acceptable when it is reasonable and shared across the team.
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: needs an employer that can sponsor a Skilled Worker visa for any role extending past 4 January 2027; permanent full-time preferred over further fixed-term contracts
+- **Flexibility**: open to remote, hybrid, commuting, and relocation (UK or abroad for English-language roles)
+- **Professional development**: wants meaningful platform / cloud / backend ownership and a path toward architecture and technical leadership; salary target £50,000+ for experienced software / DevOps roles, negotiable by location, scope and sponsorship
 
 ### 6. Salary Benchmark (Optional)
 

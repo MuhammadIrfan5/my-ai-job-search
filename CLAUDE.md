@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for Muhammad Irfan
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for Muhammad Irfan, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -13,79 +10,88 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 
 ## Candidate Profile
 
-<!-- This section is auto-populated by /setup. You can also fill it in manually. -->
+<!-- Full structured profile: .claude/skills/job-application-assistant/01-candidate-profile.md -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
+- **Name:** Muhammad Irfan
+- **Location:** Birmingham, United Kingdom (open to UK-wide remote/hybrid, London and other UK locations with commute or relocation, and relocation abroad)
+- **Phone:** +44 7823 768206
+- **Email:** muhammadirfan58912@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/muhammad-irfan1997-se/
+- **GitHub:** https://github.com/muhammadirfan5
 - **Languages:**
   | Language | Level |
   |----------|-------|
-  | [LANGUAGE] | [LEVEL] |
-  <!-- Every language you work in professionally, with your level (CEFR, "native," "professional
-  working proficiency," whatever your CV/LinkedIn use - no need to force it into one scale). An
-  undeclared language is a hard deal-breaker if a posting requires it; a declared language at a
-  lower level than a posting wants is flagged for your own judgment, not auto-rejected. See
-  04-job-evaluation.md's Language Gate. -->
-- **CV language:** [YOUR_CV_LANGUAGE] <!-- English unless your market expects otherwise; /setup asks -->
+  | English | Professional working proficiency |
+  | Urdu | Native |
+  | Hindi | Conversational |
+  | Punjabi | Conversational |
+- **CV language:** English
 
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Work authorisation:** UK Graduate Visa valid until 4 January 2027 (full right to work in the UK, no hours cap). Requires Skilled Worker visa sponsorship for any role continuing past that date. No standing work authorisation outside the UK - international roles need employer sponsorship / relocation.
+- **Status:** Actively looking for a permanent full-time role. Most recent role (DevOps Engineer, DigitalSofts / client Kuehne + Nagel) was a one-year fixed-term contract that ended July 2026.
+- **LinkedIn headline:** "DevOps / Platform Engineer | Java, AWS, Terraform, CI/CD | 5+ years bridging development and platform operations"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **MSc in Big Data Analytics** (2023-2024) - Birmingham City University, Birmingham, UK
+  - Topics: big data processing, analytics, data engineering
+- **BSc in Software Engineering** (2016-2019) - Iqra University, Karachi, Pakistan
+  - Topics: software engineering, programming, systems design
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **DevOps Engineer** (Aug 2025 - Jul 2026) - **DigitalSofts** (client: **Kuehne + Nagel**) (Birmingham, UK)
+  - Migrated 200+ Bitbucket repositories (users, permissions, 500+ pull requests, comments) to GitLab Enterprise with Groovy/Jenkins pipelines
+  - Provisioned scalable AWS infrastructure with Terraform; integrated Secrets Manager and Cognito for secure credentials and dashboard auth
+  - Built a React/Node operations dashboard over EC2, S3 and CloudFormation for self-service instance management, TTLs, tagging, log streaming and pipeline triggering
+- **DevOps & Backend Engineer** (Jan 2025 - Aug 2025) - **Avrio Global** (remote, part-time) (Karachi, Pakistan)
+  - Built full-stack insurance policy processing with Java Spring Boot, integrating IBM BPM workflows with Oracle Database
+  - Automated deployment and document-processing pipelines; conducted architectural reviews across remote teams
+- **Software & Automation Engineer (Java)** (Dec 2021 - Oct 2023) - **Avrio Global** (Karachi, Pakistan)
+  - Built Java SOAP APIs and asynchronous multithreaded services integrating IBM BPM with Oracle for a nationwide insurer (200+ branches)
+  - Improved operational efficiency by ~30% through document-processing automation
+- **Software Engineer (CI/CD & Deployment) / Full Stack Developer** (Aug 2020 - Dec 2021) - **HZTech** (Karachi, Pakistan)
+  - Integrated RemitOne APIs into a Laravel/PHP fintech account-opening and card-management platform (+30% capability, +25% transaction speed)
+  - Drove TDD to 95%+ coverage, cutting post-deployment bugs by ~30%
+- **Web Developer / PHP Web Developer** (Jun 2018 - May 2019) - **Ustad.pk** (Karachi, Pakistan)
+  - Optimised server-side logic and database structures (~30% faster retrieval); integrated third-party APIs
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Java (11/17/21, Spring Boot, Hibernate/JPA), REST APIs & microservices, AWS (EC2, S3, Secrets Manager, Cognito, CloudFormation), Terraform/IaC, Jenkins & Groovy pipelines, GitLab CI/CD, GitHub Actions, Docker, Python automation, Git/Bitbucket/GitLab migration
+- **Secondary:** Node.js, React.js, TypeScript, PHP/Laravel, Kubernetes, Gradle plugin development, SOAP/IBM BPM integration, multithreaded/high-throughput backend
+- **Domain:** enterprise logistics (Kuehne + Nagel), insurance workflow automation (IBM BPM), fintech (payments, account opening, card management)
+- **Software:** Oracle, PostgreSQL, MySQL, MongoDB, Redis, Jira, Linux; TDD, Agile/Scrum
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **Aptech Computer Certified Professional** - Aptech Computer Education - completed May 2018
+- **Code of Conduct** (Kuehne + Nagel) - completed Nov 2025
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+- None
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+- Employee of the Month - HZTech
+- Recognition for Excellence in IBM BPM Java Project - Avrio Global (senior management award)
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+<!-- No formal assessment on file. Inferred from CV - see 02-behavioral-profile.md. -->
+- **Automation-first** - consistently replaces manual toil with tooling (500+ PR migration automated, ~50% manual-effort cut, compliance checks)
+- **Bridges development and operations** - moves fluidly between backend engineering and platform/infra work
+- **Strengths:** migration and modernisation, measurable delivery outcomes, cross-functional collaboration
+- **Growth areas:** formal team leadership, deep single-cloud specialisation beyond AWS, dedicated SRE practice
+- **Thrives in:** cross-functional teams that value automation and system improvement, with end-to-end ownership and clear sprint cadence
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Solving complex technical problems, automation, and improving/scaling systems
+- Building solutions from scratch and owning work from development through deployment
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- Role-led rather than sector-led: DevOps/Platform, Java Backend, Full Stack, Cloud/SRE, PHP/Laravel
+- Priority on employers who can provide UK Skilled Worker visa sponsorship; UK, USA and Europe (English-language) preferred
 
 ### Deal-breakers
-<!-- Hard constraints on job search. Language requirements are handled separately and
-automatically from your Languages table above - don't duplicate them here. -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- Cannot take a permanent role with an employer unable to sponsor a Skilled Worker visa when required
+- Pure-maintenance roles with no meaningful development, automation, cloud, platform or backend ownership
+- (Flexible on on-call when it is reasonable and shared across the team - not a deal-breaker)
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)

@@ -14,30 +14,51 @@ Keep answers to 1-2 minutes. Be specific. End with what you learned or would do 
 
 ## Ready-Made STAR Examples
 
-<!-- These are populated by /setup from your actual experience. Below are templates showing the format. -->
+<!-- /setup Path A left STAR *candidate stubs* below, drawn from the CV. Fill in the
+Situation / Task / Action / Result lines from your own memory of each project before using
+them in an interview. Aim for 4-6 completed examples covering different competencies. -->
 
-### 1. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT - what was happening, what was the problem]
-**T:** [YOUR RESPONSIBILITY - what you specifically needed to do]
-**A:** [WHAT YOU DID - specific actions, tools, methods]
-**R:** [OUTCOME - measurable results, adoption, impact]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+## STAR Candidates (Complete Manually)
 
-### 2. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### Bitbucket to GitLab Enterprise migration (200+ repositories)
+**Source:** CV - DevOps Engineer, DigitalSofts / Kuehne + Nagel
+**What happened:** Migrated 200+ Bitbucket repositories including users, permissions and 500+ pull requests with comments to GitLab Enterprise, automating the process with Groovy/Jenkins pipelines and Python tooling against the GitLab and Jira APIs.
+**Why it matters:** Large-scale migration, automation under risk, minimising downtime, stakeholder coordination, working at scale.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
-### 3. [PROJECT_NAME] ([SKILL_DEMONSTRATED])
-**S:** [CONTEXT]
-**T:** [YOUR RESPONSIBILITY]
-**A:** [WHAT YOU DID]
-**R:** [OUTCOME]
-**Use for:** "[QUESTION_TYPE_1]", "[QUESTION_TYPE_2]"
+### AWS self-service operations dashboard
+**Source:** CV - DevOps Engineer, DigitalSofts / Kuehne + Nagel
+**What happened:** Built a React/Node dashboard over EC2, S3 and CloudFormation for self-service instance management, TTL extension, tagging, log streaming and Jenkins pipeline triggering, secured with Cognito and Secrets Manager.
+**Why it matters:** Developer experience, building internal tools, security-conscious design, full-stack delivery, initiative.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
-<!-- Add more STAR examples as needed. Aim for 4-6 covering different competencies. -->
+### IBM BPM insurance workflow automation
+**Source:** CV - Avrio Global (2021-23 and 2025)
+**What happened:** Built Java SOAP APIs and asynchronous multithreaded services integrating IBM BPM with Oracle Database for a nationwide insurer with 200+ branches; improved operational efficiency by ~30%.
+**Why it matters:** High-throughput backend design, legacy enterprise integration, reliability, delivering within enterprise constraints.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
+
+### RemitOne fintech platform integration
+**Source:** CV - HZTech (2020-21)
+**What happened:** Integrated RemitOne APIs into a Laravel/PHP fintech account-opening and card-management platform (+30% capability, +25% transaction speed); drove TDD to 95%+ coverage and cut post-deployment bugs by ~30%.
+**Why it matters:** Third-party integration, regulated / fintech domain, quality practices, performance optimisation.
+**S/T/A/R stub:**
+- Situation:
+- Task:
+- Action:
+- Result:
 
 ## Common Tough Questions
 

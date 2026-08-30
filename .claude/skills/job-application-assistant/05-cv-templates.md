@@ -129,12 +129,18 @@ When the role sits outside your home domain, **lead with the domain-transfer arg
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+<!-- Populated by /setup Path A from CV documents. Every factual claim below (5+ years,
+employers, technologies, metrics) is grounded in 01-candidate-profile.md - when drafting
+from one of these, re-check the facts against the profile, not against the template. -->
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For DevOps / Platform Engineer roles:**
+> DevOps engineer with 5+ years across software and platform engineering, focused on AWS infrastructure, Infrastructure as Code, and CI/CD automation. Provisions with Terraform, authors Groovy/Jenkins pipelines, containerises with Docker and Kubernetes, and has run a 200+ repository Bitbucket-to-GitLab Enterprise migration end to end. A Java and Python development background makes the bridge between application teams and platform operations a native one rather than a translation. [1-2 sentences connecting this to the specific employer's stack or problem.]
+
+**For Java Backend Engineer roles:**
+> Java backend engineer with 5+ years building enterprise applications on Core Java (11/17/21), Spring Boot, REST and microservices. Strong in high-throughput multithreaded services, Oracle and PostgreSQL database engineering, and IBM BPM / SOAP integration for a nationwide insurer with 200+ branches. Comfortable owning the delivery path too: Gradle build tooling, Terraform, Docker, and CI/CD pipelines. [1-2 sentences on the target domain or system.]
+
+**For Full Stack Engineer roles:**
+> Full stack engineer with 5+ years building scalable enterprise web applications, REST APIs and cloud-backed systems. Backend in Java/Spring Boot, Node.js and PHP/Laravel; frontend in React.js and TypeScript; database work across PostgreSQL, MySQL and Oracle. Track record of optimising high-throughput transactional systems and modernising legacy enterprise workflows into end-to-end solutions. [1-2 sentences tying the background to the product or team.]
 
 Statements labeled *[Used for: <company>_<role>]* were extracted from archived application drafts by `/setup` Path A. They are **phrasing references, never fact sources**: when drafting from one, every factual claim still comes from `01-candidate-profile.md` - a past tailored draft does not vouch for its own accuracy.
 

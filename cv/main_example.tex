@@ -1,8 +1,7 @@
-%% Example CV - [YOUR_NAME]
+%% Example CV - Muhammad Irfan
 %% Comprehensive overview of all competencies, experience, and achievements.
 %% Use as a master reference when tailoring role-specific CVs.
 %%
-%% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
 
@@ -33,7 +32,7 @@
     linkcolor=blue,
     filecolor=magenta,
     urlcolor=blue,
-    pdftitle={[YOUR_NAME] - CV},
+    pdftitle={Muhammad Irfan - CV},
     % Keep pdfpagemode=UseNone: this block runs after moderncv's own
     % \AtEndPreamble (moderncv.cls sets pdfpagemode there), so a FullScreen
     % value here would win and open every CV in fullscreen presentation mode.
@@ -43,13 +42,11 @@
 \usepackage{import}
 
 % personal data
-\name{[First]}{[Last]}
-% If you have no address to list, DELETE this whole line. \address{}{}{} fails
-% with "There's no line here to end" on every moderncv version.
-\address{[Your Address, City, Country]}{}{}
-\phone[mobile]{[+XX XXXXXXXXXX]}
-\email{[your.email@example.com]}
-\extrainfo{\href{[https://linkedin.com/in/your-profile]}{LinkedIn}, \href{[https://github.com/your-username]}{GitHub}}
+\name{Muhammad}{Irfan}
+\address{Birmingham, United Kingdom}{}{}
+\phone[mobile]{+44 7823 768206}
+\email{muhammadirfan58912@gmail.com}
+\extrainfo{\href{https://www.linkedin.com/in/muhammad-irfan1997-se/}{LinkedIn}, \href{https://github.com/muhammadirfan5}{GitHub}}
 
 \begin{document}
 
@@ -60,7 +57,7 @@
 % ============================================================
 
 \vspace{6pt}
-\small{[Write a 3-5 line profile statement tailored to the role you're applying for. Focus on what makes you uniquely qualified. Example: "Data scientist with a PhD in [field] and X years of industry experience. Combines deep domain expertise in [domain] with strong applied machine learning and Python development skills. Experienced in developing end-to-end ML pipelines, from data ingestion to stakeholder-facing dashboards."]}
+\small{DevOps and platform engineer with 5+ years across software and platform engineering, focused on AWS infrastructure, Infrastructure as Code, and CI/CD automation. Provisions with Terraform, authors Groovy/Jenkins pipelines, containerises with Docker and Kubernetes, and has run a 200+ repository Bitbucket-to-GitLab Enterprise migration end to end. A Core Java (11/17/21) and Python development background makes the bridge between application teams and platform operations native rather than a hand-off. Track record of removing manual toil, modernising legacy enterprise workflows, and delivering measurable throughput and reliability gains.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -70,15 +67,17 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{[Skill Category 1]}: [Specific skills, frameworks, tools. Be concrete.]
+\item \textbf{Cloud \& Infrastructure as Code}: AWS (EC2, S3, Secrets Manager, Cognito, CloudFormation); Terraform for repeatable provisioning of scalable environments.
 
-\item \textbf{[Skill Category 2]}: [Specific skills, frameworks, tools.]
+\item \textbf{CI/CD \& Automation}: Jenkins and Groovy pipelines, GitLab CI/CD, GitHub Actions; Python automation against the GitLab and Jira APIs for migration and PR-compliance tooling.
 
-\item \textbf{[Skill Category 3]}: [Specific skills, frameworks, tools.]
+\item \textbf{Backend Engineering}: Core Java 11/17/21, Spring Boot, REST APIs, microservices, high-throughput multithreaded services; SOAP and IBM BPM integration with Oracle.
 
-\item \textbf{[Skill Category 4]}: [Domain expertise, methods, approaches.]
+\item \textbf{Full Stack \& Tooling}: Node.js, React.js, TypeScript, PHP/Laravel; internal operations dashboards and self-service developer tooling.
 
-\item \textbf{[Skill Category 5]}: [Tools, platforms, software.]
+\item \textbf{Source Control \& Build}: Git, Bitbucket, GitLab administration and large-scale repository migration; Gradle custom plugin development.
+
+\item \textbf{Databases \& Practices}: Oracle, PostgreSQL, MySQL, MongoDB, Redis; TDD, unit testing, Agile/Scrum, Linux.
 
 \end{itemize}
 
@@ -91,31 +90,53 @@
 \begin{itemize}
 
 % --- Most Recent Role ---
-\item{\cventry{[YYYY-Present]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Aug 2025 - Jul 2026}{DevOps Engineer}{DigitalSofts (client: Kuehne + Nagel)}{Birmingham, UK}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1 - be specific, use numbers where possible]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
-    \item {[Achievement or responsibility 4]}
+    \item {Migrated 200+ Bitbucket repositories, including users, permissions, and 500+ pull requests with comments, to GitLab Enterprise, designing Groovy-based Jenkins pipelines to automate the migration and hold build consistency.}
+    \item {Provisioned and managed scalable AWS infrastructure with Terraform, integrating AWS Secrets Manager and Cognito for secure credential storage and dashboard authentication.}
+    \item {Built a React.js/Node.js operations dashboard over AWS EC2, S3, and CloudFormation to list, start, stop, and tag EC2 instances, extend TTLs, stream logs, and trigger Jenkins pipelines via API.}
+    \item {Engineered custom Java-based Gradle plugins supporting Java 11, 17, and 21 to automate IaC provisioning workflows.}
+    \item {Automated migration of 500+ pull requests and PR compliance checks with Python tooling against the GitLab and Jira APIs, and provided daily production support for EC2 and CloudFormation issues.}
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Previous Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Jan 2025 - Aug 2025}{DevOps \& Backend Engineer (Remote, Part-time)}{Avrio Global}{Karachi, Pakistan}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
-    \item {[Achievement or responsibility 3]}
+    \item {Built full-stack insurance policy processing with Java Spring Boot, integrating IBM BPM workflows with Oracle Database and custom web portals.}
+    \item {Automated policy workflow deployments and document-processing pipelines, integrating IBM BPM via Java SOAP web services with Oracle systems.}
+    \item {Built a PHP/Laravel inventory system for branch and head-office inventory, purchase orders, and staff assignments, reducing manual effort by \textasciitilde{}50\%.}
+    \item {Conducted architectural reviews and streamlined sprint release cycles across remote engineering teams.}
 \end{itemize}}}
 
 \vspace{3pt}
 
 % --- Earlier Role ---
-\item{\cventry{[YYYY-YYYY]}{[Job Title]}{[Company]}{[City, Country]}{}{\vspace{1pt}
+\item{\cventry{Dec 2021 - Oct 2023}{Software \& Automation Engineer (Java)}{Avrio Global}{Karachi, Pakistan}{}{\vspace{1pt}
 \begin{itemize}
-    \item {[Achievement or responsibility 1]}
-    \item {[Achievement or responsibility 2]}
+    \item {Developed SOAP APIs and Java web services consumed by the IBM BPM team, powering automated document processing, policy generation, and data retrieval for a nationwide insurer with 200+ branches.}
+    \item {Engineered asynchronous, multithreaded background services monitoring Oracle Database views for high-volume document generation.}
+    \item {Automated document-processing infrastructure across 200+ branches, improving operational efficiency by \textasciitilde{}30\%.}
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\item{\cventry{Aug 2020 - Dec 2021}{Software Engineer (CI/CD \& Deployment) / Full Stack Developer}{HZTech}{Karachi, Pakistan}{}{\vspace{1pt}
+\begin{itemize}
+    \item {Integrated RemitOne APIs with a Laravel/PHP backend for a fintech account-opening and card-management platform, increasing system capability by \textasciitilde{}30\% and transaction speed by \textasciitilde{}25\%.}
+    \item {Built and maintained a multi-tenant translation and transcription marketplace (PHP/Laravel) with REST APIs for a companion mobile app.}
+    \item {Implemented TDD pipelines with Git and Scrum, reaching 95\%+ unit test coverage and cutting post-deployment bugs by \textasciitilde{}30\%.}
+\end{itemize}}}
+
+\vspace{3pt}
+
+% --- Earlier Role ---
+\item{\cventry{Jun 2018 - May 2019}{Web Developer / PHP Web Developer}{Ustad.pk}{Karachi, Pakistan}{}{\vspace{1pt}
+\begin{itemize}
+    \item {Engineered server-side logic and optimised database structures, reducing data retrieval times by \textasciitilde{}30\%.}
+    \item {Integrated multiple third-party APIs, expanding application functionality and increasing user engagement by \textasciitilde{}20\%.}
 \end{itemize}}}
 
 \end{itemize}
@@ -128,14 +149,14 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-Thesis: ``[Thesis Title].'' [Brief description of research focus.]
+\item{\cventry{2023-2024}{MSc in Big Data Analytics}{Birmingham City University}{Birmingham, UK}{}{\vspace{1pt}
+Big data processing, analytics, and data engineering.
 }}
 
 \vspace{3pt}
 
-\item{\cventry{[YYYY-YYYY]}{[Degree] in [Field]}{[Institution]}{[City, Country]}{}{\vspace{1pt}
-[Brief description or key topics.]
+\item{\cventry{2016-2019}{BSc in Software Engineering}{Iqra University}{Karachi, Pakistan}{}{\vspace{1pt}
+Software engineering, programming, and systems design.
 }}
 
 \end{itemize}
@@ -147,27 +168,28 @@ Thesis: ``[Thesis Title].'' [Brief description of research focus.]
 \section{Languages}
 \vspace{1pt}
 \begin{itemize}
-\item {[Language 1] (native), [Language 2] (fluent), [Language 3] (intermediate).}
+\item {English (professional working proficiency), Urdu (native), Hindi (conversational), Punjabi (conversational).}
 \end{itemize}
 
 % ============================================================
-%     PUBLICATIONS (optional)
-% ============================================================
-
-\section{Publications}
-\vspace{1pt}
-\begin{itemize}
-\item {[Author(s)] ([Year]). [Title]. [Journal/Conference]. \href{[DOI_URL]}{DOI link}}
-\end{itemize}
-
-% ============================================================
-%     HONORS AND AWARDS (optional)
+%     HONORS AND AWARDS
 % ============================================================
 
 \section{Honors and Awards}
 \vspace{1pt}
 \begin{itemize}
-\item{\textbf{[Award Name]} -- [Event/Organization] ([Year]).}
+\item{\textbf{Employee of the Month} -- HZTech.}
+\item{\textbf{Recognition for Excellence in IBM BPM Java Project} -- Avrio Global (senior management award).}
+\end{itemize}
+
+% ============================================================
+%     CERTIFICATIONS
+% ============================================================
+
+\section{Certifications}
+\vspace{1pt}
+\begin{itemize}
+\item{Aptech Computer Certified Professional -- Aptech Computer Education (May 2018).}
 \end{itemize}
 
 % ============================================================

@@ -1,84 +1,115 @@
 # Search Queries for Job Scraper
 
-<!-- SETUP: Customize these queries based on your skills, target roles, and location -->
+<!-- Populated by /setup for Muhammad Irfan. Re-run `/setup --section search` to update. -->
 
 ## Installed portal CLIs (primary for `/scrape`)
 
-`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Shipped country-agnostic CLIs include `linkedin-search` and `freehire-search`; Danish demos and any skill you add with `/add-portal` are included the same way. You do **not** need a matching `site:` line below for those CLIs to run.
+`/scrape` discovers every portal skill under `.agents/skills/*/SKILL.md` and runs its CLI first. Currently enabled:
 
-The `site:` query templates in this file are the **WebSearch fallback** — for portals without a CLI, company career pages, or when a CLI fails.
+- **linkedin-search** - any country/city or remote (primary)
+- **freehire-search** - tech/software/data/DevOps roles across ~50 ATS platforms, many markets + remote (primary for engineering roles)
+- **jobindex-search**, **jobbank-search**, **jobdanmark-search**, **jobnet-search** - Denmark only (enabled because Denmark is a target market; ignore their output when not searching Denmark)
 
-**Language scope:** write every query category in every language listed in your CLAUDE.md Languages table (typically 1-2, sometimes more). A posting requiring a language you have *not* declared, as a job condition, is excluded before scoring; a posting requiring a *higher level* than you declared in a language you *do* work in is flagged for your own judgment, not excluded — see `04-job-evaluation.md`'s Language Gate, the single source of truth for this rule. Translate each category's keywords rather than machine-translating word-for-word (e.g. "Frontend Developer" -> "Desarrollador Frontend", not a literal word-for-word translation) if you work in more than one language.
+You do **not** need a matching `site:` line below for those CLIs to run. The `site:` templates are the **WebSearch fallback** - for portals without a CLI (Reed, Indeed, StepStone, TotalJobs, Otta, Welcome to the Jungle, Greenhouse boards), company career pages, or when a CLI fails. To promote any of those to a real CLI, scaffold one with `/add-portal`.
+
+**Language scope:** all target markets are English-language, so write every query in **English only**. Muhammad also speaks Urdu, Hindi and Punjabi, but these are not job-search languages for the target countries. See `04-job-evaluation.md`'s Language Gate for how language requirements are handled at scoring time.
+
+**Sponsorship scope:** Muhammad holds a UK Graduate Visa (expires 4 Jan 2027) and needs Skilled Worker sponsorship for permanent UK roles, and full sponsorship/relocation for any role outside the UK. Prefer queries and filters that surface sponsor-friendly employers. Add `visa sponsorship` or `sponsorship available` as a query variant where the board supports free-text search. Non-UK results are in scope but should be treated as sponsorship-gated (see `04-job-evaluation.md`).
 
 ## Search Sites
 
-Primary (your market's job boards - scaffold one with `/add-portal`):
-- **[YOUR_JOB_BOARD]** - your market's largest general job board
-- **linkedin.com/jobs** - LinkedIn job listings (filter: [YOUR_COUNTRY] / [YOUR_CITY]); also covered by `linkedin-search` CLI
-- **[YOUR_INDUSTRY_JOB_BOARD]** - a niche/industry board for your field (optional)
-- **[YOUR_ADDITIONAL_JOB_BOARD]** - another major board for your market (optional)
+Primary (via CLI): LinkedIn, freehire.me aggregator, Danish boards (Denmark only).
 
-Secondary (company career pages via Google):
-- Direct Google searches with `site:` filters for known target companies
+Fallback (via WebSearch `site:` filters):
+- **reed.co.uk**, **indeed.co.uk**, **stepstone.co.uk** / **stepstone.de**, **totaljobs.com**, **otta.com**, **welcometothejungle.com**, **cv-library.co.uk** - UK/EU general and tech boards
+- **boards.greenhouse.io**, **jobs.lever.co**, **ashbyhq.com** - ATS-hosted company career pages (often sponsor-friendly scale-ups)
+- Direct Google searches with `site:` filters for company career pages
 
 ## Query Categories
 
-Queries are grouped by priority. Write **each category in every language from your Languages table** (see Language scope above). Combine each query with your location terms (e.g. your city, region, or metro area) where the site supports it.
+Queries are grouped by priority (Muhammad's stated ranking). Combine each with a location term from the Location Filter below where the site supports it. Organised by function; several title variants per category.
 
-**Organize by function, not job title.** The same underlying work carries different titles across companies and markets (a "Data Scientist" role at one employer may be posted as "Insights Analyst" or "Data Consultant" at another). Name each priority category after the function it covers, and list several plausible job titles as query variants within that category rather than betting an entire priority tier on one exact title string.
+### Priority 1: DevOps / Platform Engineer
 
-### Priority 1: [YOUR_PRIMARY_ROLE_TYPE]
-
-These match your strongest and most desired career direction.
+Strongest and most desired direction.
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_PRIMARY_JOB_TITLE_2]" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_KEY_SKILL]" [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_PRIMARY_JOB_TITLE_1]" [YOUR_COUNTRY]
+site:linkedin.com/jobs "DevOps Engineer" (remote UK OR London OR Birmingham)
+site:linkedin.com/jobs "Platform Engineer" (remote UK OR United Kingdom)
+site:linkedin.com/jobs ("DevOps Engineer" OR "Platform Engineer") "visa sponsorship"
+site:reed.co.uk "DevOps Engineer" Terraform AWS
+site:indeed.co.uk "Platform Engineer" (Kubernetes OR Terraform)
+site:boards.greenhouse.io ("DevOps Engineer" OR "Platform Engineer") "sponsorship"
+site:linkedin.com/jobs ("Infrastructure Engineer" OR "CI/CD Engineer") Jenkins Terraform
 ```
 
-### Priority 2: [YOUR_DOMAIN_EXPERTISE]
-
-These match your domain expertise.
+### Priority 2: Java Backend / Java Software Engineer
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] OR [YOUR_REGION]
-site:[YOUR_JOB_BOARD] [YOUR_DOMAIN_KEYWORD_2] [YOUR_COUNTRY]
-site:linkedin.com/jobs [YOUR_DOMAIN_KEYWORD_1] [YOUR_CITY] [YOUR_COUNTRY]
+site:linkedin.com/jobs ("Java Engineer" OR "Java Backend Engineer" OR "Java Software Engineer") (remote UK OR London)
+site:linkedin.com/jobs "Backend Engineer" "Spring Boot" (United Kingdom OR remote)
+site:reed.co.uk "Java Developer" "Spring Boot" microservices
+site:indeed.co.uk "Java Backend Developer" AWS
+site:linkedin.com/jobs ("Java Engineer" OR "Backend Engineer") "visa sponsorship"
+site:boards.greenhouse.io "Backend Engineer" Java "sponsorship"
 ```
 
-### Priority 3: [YOUR_ADJACENT_ROLE_TYPE]
-
-Adjacent roles you could pivot into.
+### Priority 3: Full Stack Engineer
 
 ```
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_1]" [YOUR_KEY_SKILL] [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "[YOUR_ADJACENT_TITLE_2]" [YOUR_KEY_SKILL] [YOUR_CITY]
+site:linkedin.com/jobs "Full Stack Engineer" (Java OR Node OR React) (remote UK OR London OR Birmingham)
+site:linkedin.com/jobs "Full Stack Developer" (Laravel OR PHP OR Node.js)
+site:reed.co.uk "Full Stack Developer" React (Java OR Node)
+site:otta.com "Full Stack Engineer" (Java OR TypeScript)
+site:linkedin.com/jobs "Full Stack Engineer" "visa sponsorship"
 ```
 
-### Priority 4: Broader Technical / Consulting
-
-Wider net for general technical roles.
+### Priority 4: Cloud Engineer / SRE
 
 ```
-site:[YOUR_JOB_BOARD] [YOUR_KEY_SKILL] developer [YOUR_CITY]
-site:linkedin.com/jobs "[YOUR_KEY_SKILL] developer" [YOUR_CITY]
-site:[YOUR_JOB_BOARD] "technical consultant" [YOUR_DOMAIN] [YOUR_CITY]
+site:linkedin.com/jobs ("Cloud Engineer" OR "Site Reliability Engineer" OR "SRE") AWS (remote UK OR United Kingdom)
+site:linkedin.com/jobs "AWS Engineer" Terraform
+site:reed.co.uk ("Cloud Engineer" OR "SRE") AWS Kubernetes
+site:linkedin.com/jobs ("Cloud Engineer" OR "SRE") "visa sponsorship"
 ```
+
+### Priority 5: PHP / Laravel, and broader Software / Backend / API Engineer
+
+Wider net, including the earlier-career specialism and generic titles.
+
+```
+site:linkedin.com/jobs ("PHP Engineer" OR "Laravel Developer" OR "PHP Developer") (remote UK OR United Kingdom)
+site:linkedin.com/jobs ("Software Engineer" OR "Backend Engineer" OR "API Engineer") (Java OR Python OR PHP) "visa sponsorship"
+site:reed.co.uk "Laravel Developer" REST API
+site:indeed.co.uk "Software Engineer" (Java OR PHP) sponsorship
+site:welcometothejungle.com ("Backend Engineer" OR "Software Engineer") (Java OR PHP OR Node)
+```
+
+### International (all sponsorship-gated - English-language roles only)
+
+Run these against `linkedin-search` and `freehire-search` with the country supplied explicitly.
+
+```
+"DevOps Engineer" OR "Platform Engineer" (visa sponsorship OR relocation) [country]
+"Java Backend Engineer" OR "Backend Engineer" "relocation" [country]
+"Full Stack Engineer" (sponsorship OR relocation assistance) [country]
+```
+
+Target countries: USA, Canada, Germany, Netherlands, France, Italy, Denmark, Ireland, rest of EU (English-speaking teams), Australia, New Zealand, UAE / Dubai, Saudi Arabia.
 
 ## Location Filter
 
-When evaluating results, verify the job location is within reasonable commute distance from your home. Define acceptable areas:
-- [YOUR_CITY] and surrounding areas
-- [ACCEPTABLE_AREA_1]
-- [ACCEPTABLE_AREA_2]
-- [BORDERLINE_AREA] (borderline - ~X min by transit)
-- [TOO_FAR_AREA] (too far)
+Tiered by preference. All non-UK tiers require employer sponsorship / relocation.
+
+- **Ideal:** Fully remote (UK-based contract of employment); Birmingham and West Midlands on-site/hybrid.
+- **Acceptable:** Hybrid anywhere in the UK with a weekly or occasional commute; London (hybrid); any UK city with relocation.
+- **Acceptable (sponsorship-gated):** Remote roles that hire from the UK; USA, Canada, Ireland, Germany, Netherlands, Denmark, rest of Europe (English-language), Australia, New Zealand, UAE/Dubai, Saudi Arabia - with visa sponsorship and relocation support.
+- **Borderline:** Non-UK roles that are silent on sponsorship (flag, do not auto-drop - see eligibility gate).
+- **Too far / exclude:** Roles explicitly stating "no visa sponsorship" or requiring existing unrestricted/permanent right to work in a country where Muhammad has none; on-site-only roles in a location with no relocation offered and no realistic commute.
 
 ## Language Filter
 
-Your working languages and levels are in CLAUDE.md's Languages table. When filtering scraped results, apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language you haven't declared at all is excluded; a posting requiring a higher level than you declared in a language you do work in is not excluded, flag it clearly instead (see `job-scraper/SKILL.md`'s Step 3 "Quick Fit Assessment" for how the flag surfaces in `/scrape` output). Postings simply *written* in a language you don't work in, that don't require it on the job, are fine.
+All target markets are English-language. Apply `04-job-evaluation.md`'s Language Gate: a posting requiring a language Muhammad has not declared (English, Urdu, Hindi, Punjabi), as a job condition, is excluded; a posting requiring a higher English level than "professional working proficiency" is flagged, not excluded. Postings merely *written* in another language, for a role that operates in English, are fine.
 
 ## Date Filter
 
@@ -86,5 +117,4 @@ Only include jobs posted within the last 14 days, or with an application deadlin
 
 ## Adapting Queries
 
-If the user specifies a focus area, select queries from the matching category and also generate 2-3 custom queries for that focus. For example:
-- "/scrape [focus_area]" -> relevant category queries + custom focus-specific queries
+If the user specifies a focus area (e.g. `/scrape kubernetes` or `/scrape london java`), select queries from the matching category and generate 2-3 custom queries for that focus.
